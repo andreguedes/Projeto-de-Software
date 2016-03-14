@@ -12,11 +12,17 @@ public class GeracaoDeEmails {
 	public static void main(String[] args) {
 		String emailDoCliente = "nomedocliente@provedor.com";
 		
-		Cliente tipoCliente = AplicacaoDeGeracaoDeEmail.obterTipoDeClienteDoUsuario(TipoCliente.EM_RETORNO);
+		Cliente tipoCliente;
+		try {
+			tipoCliente = AplicacaoDeGeracaoDeEmail.obterTipoDeClienteDoUsuario(TipoCliente.EM_RETORNO);
+			
+			MensagemDeCorreio mensagemParaCliente = tipoCliente.obterMensagem();
+			
+			AplicacaoCliente.enviarMensagem(mensagemParaCliente, emailDoCliente);
 		
-		MensagemDeCorreio mensagemParaCliente = tipoCliente.obterMensagem();
-		
-		AplicacaoCliente.enviarMensagem(mensagemParaCliente, emailDoCliente);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}	
 	}
 
 }

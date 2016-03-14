@@ -6,7 +6,7 @@ public class AplicacaoDeGeracaoDeEmail {
 		FREQUENTE, EM_RETORNO, CURIOSO, NOVATO
 	}
 
-	public static Cliente obterTipoDeClienteDoUsuario(final TipoCliente tipoDoCliente) {
+	public static Cliente obterTipoDeClienteDoUsuario(final TipoCliente tipoDoCliente) throws ClassNotFoundException {
 		switch(tipoDoCliente) {
 		case FREQUENTE:
 			return new Frequente();
@@ -16,9 +16,8 @@ public class AplicacaoDeGeracaoDeEmail {
 			return new Curioso();
 		case NOVATO:
 			return new Novato();
-			default:
-				break;
+		default:
+			throw new ClassNotFoundException("Tipo de cliente nao definido");
 		}
-		return null;
 	}
 }
