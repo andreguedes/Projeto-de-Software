@@ -1,0 +1,5 @@
+Propósito de projeto:
+	- Criar objetos individuais em situações em que o construtor isoladamente é inadequado.
+	
+Resumo do padrão de projeto:
+	- Use métodos para retornar os objetos necessários
