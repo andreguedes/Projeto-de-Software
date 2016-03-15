@@ -1,0 +1,8 @@
+Proposito do projeto:
+	- Assegurar que exista exatamente uma instancia de determinada classe.
+	- Ser capaz de obter a instancia a partir de qualquer lugar da aplicação.
+	
+Resumo do padrao de projeto:
+	- Torne o construtor da classe privado.
+	- Defina um atributo estatico privado para a classe de mesmo tipo.
+	- Defina um acessor publico para este atributo.
