@@ -1,0 +1,2 @@
+Proposito do projeto:
+	- Fornecer uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas.
