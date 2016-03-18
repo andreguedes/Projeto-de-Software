@@ -1,0 +1,2 @@
+Proposito do projeto:
+	- Separar a construcao de um objeto complexo de sua representacao de modo que o mesmo processo de construcao possa criar diferentes representacoes
